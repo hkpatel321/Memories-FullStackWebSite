@@ -1,6 +1,8 @@
 import axios from 'axios'
+const isProd=true;
 
-const API=axios.create({baseURL:'http://localhost:5000'});
+const baseURL= isProd?"https://cloudymemories.onrender.com":"http://localhost:5000";
+const API=axios.create({baseURL:baseURL});
 
 API.interceptors.request.use((req)=>{
     if(localStorage.getItem('profile')){
