@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';  // Use Grid instead of Container
+import { Grid } from '@material-ui/core';  
 
 import Navbar from './components/Navbar/Navbar.js';
 import Home from './components/Home/Home.js';
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <GoogleOAuthProvider clientId="885944597905-3bo5bt83v14mv0gj0ug18o40fnhp15j3.apps.googleusercontent.com">
-      <Grid container spacing={3} justifyContent="center"> {/* Use Grid for layout */}
+      <Grid container spacing={3} justifyContent="center"> 
         <Navbar />
         <Switch>
           <Route path='/' exact component={() => <Redirect to='/posts' />} />
